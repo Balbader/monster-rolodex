@@ -11,3 +11,6 @@ The goal of this project is to get a better understanding of: <br>
 • arrow function methods in classes
 • naming files
 • basic app structure
+
+## Link 
+

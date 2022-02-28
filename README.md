@@ -13,4 +13,5 @@ The goal of this project is to get a better understanding of: <br>
 • basic app structure
 
 ## Link 
+[Project Demo](https://balbader.github.io/monster-rolodex/) 
 

@@ -10,7 +10,7 @@ class App extends Component {
     this.state = {
       monsters: [],
       searchField: ''
-    }
+    };
   }
 
   componentDidMount() {                                       // wait for the component to mount
@@ -18,6 +18,11 @@ class App extends Component {
       .then(response => response.json())                      // .json() will give us back the response in a json format 
       .then(users => this.setState({ monsters: users }))      // setting the monsters to this array of users
   }
+
+  handleChange = e => {
+    this.setState({ searchField: e.target.value });
+  }
+
 
   render() {
     const { monsters, searchField } = this.state;
@@ -29,9 +34,10 @@ class App extends Component {
 
     return (
       <div className="App">
+        <h1>Monsters Rolodex</h1>
         <SearchBox
           placeholder='Search Monsters'
-          handleChange={e => this.setState({ searchField: e.target.value })}
+          handleChange={this.handleChange}
         />
         <CardList monsters={filteredMonsters} />
       </div>
